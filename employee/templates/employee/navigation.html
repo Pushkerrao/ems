@@ -1,0 +1,68 @@
+{% load static %}
+<!-- partial:partials/_sidebar.html -->
+<header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <a href="{% url 'home-page' %}" class="brand-logo">
+                <h3 class="text-light">Employee-Management-System</h3>
+            </a>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+            <nav class="mdc-tab-bar" role="tablist">
+                <a class="mdc-tab " href="{% url 'home-page' %}" role="tab" aria-selected="true">
+                    <span class="mdc-tab__content">
+                        <span class="mdc-tab__text-label">Home</span>
+                    </span>
+                </a>
+                <a class="mdc-tab" href="{% url 'department-page' %}" role="tab" aria-selected="false">
+                    <span class="mdc-tab__content">
+                        <span class="mdc-tab__text-label">Department List</span>
+                    </span>
+                </a>
+                <a class="mdc-tab" href="{% url 'employee-page' %}" role="tab" aria-selected="false">
+                    <span class="mdc-tab__content">
+                        <span class="mdc-tab__text-label">Employee List</span>
+                    </span>
+                </a>
+            </nav>
+        </section>
+    </div>
+</header>
+
+{% comment %} <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
+    <div class="mdc-drawer__header border-bottom border-light">
+        <a href="{% url 'home-page' %}" class="brand-logo">
+            <h3 class="text-center text-light">Organization</h3>
+        </a>
+    </div>
+    <div class="mdc-drawer__content">
+        <div class="mdc-list-group">
+            <nav class="mdc-list mdc-drawer-menu">
+                <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="{% url 'home-page' %}">
+                        <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">home</i> Home
+                    </a>
+                </div>
+                <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="{% url 'department-page' %}">
+                        <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">business</i> Department List
+                    </a>
+                </div>
+                <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="{% url 'employee-page' %}">
+                        <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">group</i> Employee List
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</aside> {% endcomment %}
+<!-- partial -->
+<style>
+    .mdc-tab--active{
+        color:white !important;
+    }
+    .mdc-tab{    display: table-cell !important;}
+    .mdc-top-app-bar {
+        background-color: #292c2f !important;}
+</style>
