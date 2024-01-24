@@ -15,6 +15,7 @@ from django.core.files.storage import default_storage
 from rest_framework import status
 import os
 
+#API'S for employees 
 @api_view(['GET'])
 def get_all_employees(request):
     try:
@@ -140,6 +141,7 @@ def home(request):
     return render(request, 'employee/home.html', context)
 
 
+# Web methods for employees 
 @login_required
 def employees(request):
     employees = get_employees()

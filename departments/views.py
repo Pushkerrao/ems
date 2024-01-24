@@ -11,7 +11,7 @@ from django.http import JsonResponse
 from django.shortcuts import render
 
 
-
+#API'S for departments
 @api_view(['GET'])
 def get_all_departments(request):
     try:
@@ -76,7 +76,7 @@ def api_delete_department(request, department_id):
     except Exception as error:
         return Response({"status": 0, "statusCode": 500, "message": str(error)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-#  Departments
+# Web methods for   Departments
 @login_required
 def departments(request):
     departments_list = get_departments()
